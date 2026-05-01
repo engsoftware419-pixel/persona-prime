@@ -28,6 +28,28 @@ function Index() {
       style={{ background: "var(--gradient-bg)" }}
     >
       <ThemeToggle />
+      {/* Brand mark */}
+      <a
+        href="/"
+        className="group fixed left-5 top-5 z-50 flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-xl transition-all duration-300 hover:border-white/25 hover:bg-white/10"
+        aria-label="Scoopz home"
+      >
+        <span
+          className="h-2 w-2 rounded-full"
+          style={{ backgroundImage: "var(--gradient-cta)" }}
+          aria-hidden
+        />
+        <span
+          className="bg-clip-text text-lg font-semibold tracking-tight text-transparent"
+          style={{
+            fontFamily: "var(--font-display)",
+            backgroundImage: "var(--gradient-name)",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Scoopz
+        </span>
+      </a>
       {/* Ambient grain / glow overlays */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay [background:repeating-linear-gradient(0deg,transparent_0,transparent_2px,oklch(1_0_0)_2px,oklch(1_0_0)_3px)]" />
 
