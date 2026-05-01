@@ -32,8 +32,8 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-pink: var(--pink);
-  --font-display: "Cormorant Garamond", "Playfair Display", serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Fraunces", "Cormorant Garamond", serif;
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
   --animate-float: float 6s ease-in-out infinite;
   --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
 
