@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Lock, Sparkles, ArrowDown, Flame, Eye, Zap } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import avatar from "@/assets/profile-avatar.jpg";
 import f1 from "@/assets/feature-1.jpg";
 import f2 from "@/assets/feature-2.jpg";
@@ -26,6 +27,7 @@ function Index() {
       className="relative min-h-screen w-full overflow-hidden"
       style={{ background: "var(--gradient-bg)" }}
     >
+      <ThemeToggle />
       {/* Ambient grain / glow overlays */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay [background:repeating-linear-gradient(0deg,transparent_0,transparent_2px,oklch(1_0_0)_2px,oklch(1_0_0)_3px)]" />
 
@@ -63,14 +65,14 @@ function Index() {
           </div>
 
           {/* Name */}
-          <h1 className="mt-10 text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          <h1
+            className="mt-10 text-5xl leading-[1.0] tracking-[-0.04em] sm:text-6xl md:text-7xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
             <span className="font-light text-foreground">Lina</span>{" "}
             <span
               className="italic font-medium bg-clip-text text-transparent"
-              style={{
-                fontFamily: "var(--font-display)",
-                backgroundImage: "var(--gradient-name)",
-              }}
+              style={{ backgroundImage: "var(--gradient-name)" }}
             >
               Fight Girl
             </span>
