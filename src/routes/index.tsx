@@ -17,6 +17,9 @@ const features = [
   { src: f4, alt: "Modern studio portrait" },
 ];
 
+// Single source of truth — change this URL once and it updates the CTA button + every gallery card.
+const UNLOCK_URL = "https://example.com";
+
 function Index() {
   return (
     <main
@@ -97,7 +100,9 @@ function Index() {
 
           {/* CTA */}
           <a
-            href="#gallery"
+            href={UNLOCK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group/cta relative mt-10 inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
             style={{
               backgroundImage: "var(--gradient-cta)",
@@ -134,9 +139,13 @@ function Index() {
           className="mt-24 grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8"
         >
           {features.map((f, i) => (
-            <article
+            <a
               key={i}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-white/20"
+              href={UNLOCK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Unlock Her World"
+              className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               style={{ boxShadow: "var(--shadow-card)" }}
             >
               <div className="relative aspect-square overflow-hidden rounded-2xl">
@@ -153,7 +162,7 @@ function Index() {
                   <Lock className="h-4 w-4 text-white/90" />
                 </div>
               </div>
-            </article>
+            </a>
           ))}
         </section>
 
