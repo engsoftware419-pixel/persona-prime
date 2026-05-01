@@ -138,7 +138,7 @@ function Index() {
         {/* GALLERY GRID */}
         <section
           id="gallery"
-          className="mt-24 grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8"
+          className="mt-24 grid w-full max-w-3xl grid-cols-2 gap-3 sm:gap-6 md:gap-8"
         >
           {features.map((f, i) => (
             <a
