@@ -65,14 +65,14 @@ function Index() {
           </div>
 
           {/* Name */}
-          <h1 className="mt-10 text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+          <h1
+            className="mt-10 text-5xl leading-[1.0] tracking-[-0.04em] sm:text-6xl md:text-7xl"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
             <span className="font-light text-foreground">Lina</span>{" "}
             <span
               className="italic font-medium bg-clip-text text-transparent"
-              style={{
-                fontFamily: "var(--font-display)",
-                backgroundImage: "var(--gradient-name)",
-              }}
+              style={{ backgroundImage: "var(--gradient-name)" }}
             >
               Fight Girl
             </span>
